@@ -23,8 +23,6 @@ const EditeData = () => {
     useEffect(() => {
         GetOne(id)
     }, [])
-    console.log(id);
-
     const editeData_func = () => {
         let obj = {
             name: name,
