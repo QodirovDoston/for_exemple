@@ -74,17 +74,17 @@ const Footer = () => {
                 <th>Age</th>
               </tr>
               <tbody>
-                {data ?.map((r) => {
-                  if(r.id <= drop)
+                {data ?.map((datas) => {
+                  if(datas.id <= drop)
                   return (
                     <tr>
-                        <td>{r.id}</td>
-                        <td>{r.name}</td>
-                        <td>{r.age}</td>
-                        <img style={{ width: "100px", height: "80px" }} src={r.img} alt="" />
-                        <button onClick={() => DeleteData(r.id)}>Delete</button>
-                        <Link to={`/table/editetable/${r.id}`}>
-                          <button className='editbtn ' onClick={() => edite_func(r.id)}>Edite</button>
+                        <td>{datas.id}</td>
+                        <td>{datas.name}</td>
+                        <td>{datas.age}</td>
+                        <img style={{ width: "100px", height: "80px" }} src={datas.img} alt="" />
+                        <button onClick={() => DeleteData(datas.id)}>Delete</button>
+                        <Link to={`/table/editetable/${datas.id}`}>
+                          <button className='editbtn ' onClick={() => edite_func(datas.id)}>Edite</button>
                         </Link>
                       </tr>
                   )
