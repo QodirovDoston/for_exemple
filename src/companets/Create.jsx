@@ -14,7 +14,6 @@ const Create = () => {
   
   const createData = (e) => {
     e.preventDefault()
-
    axios.post('http://localhost:3004/data',obj)
     .then((res) => {
       if (res.status === 201) {
