@@ -5,8 +5,7 @@ import { Link } from 'react-router-dom'
 
 const Footer = () => {
   const [data, setData] = useState([])
-  const [drop, setDrop] = useState()
-
+  const [drop, setDrop] = useState(2)
 
 
   const GetAllData = () => {
@@ -36,26 +35,27 @@ const Footer = () => {
       })
   }
 
-  // const drap_Down = (id) => {
-  //   axios.get(`http://localhost:3004/data/${id}`)
-  //     .then((res) => {
-  //     })
-  // }
+
+  const handleSelect = (e)=>{
+    setDrop(e)       
+  }
+  
+  // console.log(drop)
   return (
     <>
       <Container>
         <Row className='justify-content-center mt-3'>
           <Col xs={3}>
-            <Dropdown>
-              <Dropdown.Toggle variant="success" id="dropdown-basic">
+            <Dropdown onSelect={handleSelect}>
+              <Dropdown.Toggle  variant="success" id="dropdown-basic">
                 son
               </Dropdown.Toggle>
-              <Dropdown.Menu>
-                {data?.map((index) => {
+              <Dropdown.Menu >
+                {data?.map((index,ind) => {
                   return (
-                    <>
-                      <Dropdown.Item>{index.id}</Dropdown.Item>
-                    </>
+                    <Dropdown.Item  eventKey={index.id} key={ind}>
+                    {index.id}
+                    </Dropdown.Item>
                   )
                 })}
               </Dropdown.Menu>
@@ -74,20 +74,19 @@ const Footer = () => {
                 <th>Age</th>
               </tr>
               <tbody>
-                {data?.map((data) => {
+                {data?.map((datas) => {
+                  if(datas.id <= drop)
                   return (
-                    <>
-                      <tr>
-                        <td>{data.id}</td>
-                        <td>{data.name}</td>
-                        <td>{data.age}</td>
-                        <img style={{ width: "100px", height: "80px" }} src={data.img} alt="" />
-                        <button onClick={() => DeleteData(data.id)}>Delete</button>
-                        <Link to={`/table/editetable/${data.id}`}>
-                          <button className='editbtn ' onClick={() => edite_func(data.id)}>Edite</button>
+                    <tr>
+                        <td>{datas.id}</td>
+                        <td>{datas.name}</td>
+                        <td>{datas.age}</td>
+                        <img style={{ width: "100px", height: "80px" }} src={datas.img} alt="" />
+                        <button onClick={() => DeleteData(datas.id)}>Delete</button>
+                        <Link to={`/table/editetable/${datas.id}`}>
+                          <button className='editbtn ' onClick={() => edite_func(datas.id)}>Edite</button>
                         </Link>
                       </tr>
-                    </>
                   )
                 })}
               </tbody>
