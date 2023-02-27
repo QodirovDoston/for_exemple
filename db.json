@@ -1,0 +1,64 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "doston",
+      "age": 22,
+      "img": "https://st.depositphotos.com/1000152/1735/i/600/depositphotos_17356089-stock-photo-tropical-beach.jpg"
+    },
+    {
+      "name": "surat",
+      "age": "23",
+      "img": "https://st.depositphotos.com/1000152/1735/i/600/depositphotos_17356089-stock-photo-tropical-beach.jpg",
+      "id": 2
+    },
+    {
+      "name": "dilshod",
+      "age": "33",
+      "img": "https://st.depositphotos.com/1000152/1735/i/600/depositphotos_17356089-stock-photo-tropical-beach.jpg",
+      "id": 3
+    },
+    {
+      "name": "gaybulo",
+      "age": "44",
+      "img": "https://st.depositphotos.com/1000152/1735/i/600/depositphotos_17356089-stock-photo-tropical-beach.jpg",
+      "id": 4
+    },
+    {
+      "name": "umidhon",
+      "age": "16",
+      "img": "https://st.depositphotos.com/1000152/1735/i/600/depositphotos_17356089-stock-photo-tropical-beach.jpg",
+      "id": 5
+    },
+    {
+      "name": "hurshid",
+      "age": "17",
+      "img": "https://st.depositphotos.com/1000152/1735/i/600/depositphotos_17356089-stock-photo-tropical-beach.jpg",
+      "id": 6
+    },
+    {
+      "name": "behruz",
+      "age": "15",
+      "img": "https://st.depositphotos.com/1000152/1735/i/600/depositphotos_17356089-stock-photo-tropical-beach.jpg",
+      "id": 7
+    },
+    {
+      "name": "Ahror bg'at",
+      "age": "20",
+      "img": "https://st.depositphotos.com/1000152/1735/i/600/depositphotos_17356089-stock-photo-tropical-beach.jpg",
+      "id": 8
+    },
+    {
+      "name": "sjdhdhhdhdh",
+      "age": "29",
+      "img": "https://st.depositphotos.com/1000152/1735/i/600/depositphotos_17356089-stock-photo-tropical-beach.jpg",
+      "id": 9
+    },
+    {
+      "name": "3938838",
+      "age": "kdnj",
+      "img": "https://st.depositphotos.com/1000152/1735/i/600/depositphotos_17356089-stock-photo-tropical-beach.jpg",
+      "id": 10
+    }
+  ]
+}
