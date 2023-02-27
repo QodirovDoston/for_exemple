@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { Col, Container, Dropdown, Row, Table } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
   const [data, setData] = useState([])
@@ -25,6 +26,13 @@ const Footer = () => {
     GetAllData()
   },[])
 
+
+  const edite_func = (id) => {
+    axios.edikkjte(`http://localhost:3004/data/${id}`)
+        .then((res) => {
+            alert(res.statusText)
+        })
+}
   return (
     <>
       <Container>
@@ -47,7 +55,6 @@ const Footer = () => {
       </Dropdown.Menu>
     </Dropdown>
         </Row>
-
         <Row className='justify-content-center mt-5' >
           <Col xs={8}>
             <Table striped bordered hover>
@@ -67,7 +74,9 @@ const Footer = () => {
                       <td>{data.age}</td>
                       <img style={{width:"100px",height:"80px"}} src={data.img} alt="" />
                       <button onClick={()=>DeleteData(data.id)}>Delete</button>
-                      {/* <button onClick={()=>EdeteData(data.id)}>Edete</button> */}
+                      <Link to={`/table/editetable/${data.id}`}>
+                                <button className='editbtn ' onClick={() => edite_func(data.id)}>Edite</button>
+                            </Link>
 
                     </tr>
                   )

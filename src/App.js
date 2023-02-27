@@ -1,9 +1,8 @@
 import { Route, Routes } from 'react-router-dom'
 import Create from './companets/Create';
+import EditeData from './companets/Edite/Editedata';
 import Footer from "./companets/Footer/Footer";
-import Header from "./companets/Header/Header";
 import NavbarDos from './companets/Navbar/Navbar';
-// import CreateData from './companets/Section/Section';
 
 function App() {
   return (
@@ -11,11 +10,10 @@ function App() {
 
    <NavbarDos/>
       <Routes>
-        <Route path='/home' element={<Header/>}/>
         <Route path='/create' element={<Create/>}/>
         <Route path='/table' element={<Footer/>}/>
+        <Route path='/table/editetable/:id' element={<EditeData/>}/>
       </Routes>
-      {/* <Create/> */}
     </>
   );
 }

@@ -11,8 +11,8 @@ const NavbarDos = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto gap-5">
-            <Link  style={{textDecoration:"none", color:"black"}} to={'/home'} >
-            <li>Home</li>
+            <Link>
+            <li>                 </li>
             </Link>
             <Link style={{textDecoration:"none", color:"black"}} to={'/create'}>
             <li>Create</li>
