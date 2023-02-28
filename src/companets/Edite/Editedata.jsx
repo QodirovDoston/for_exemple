@@ -2,7 +2,6 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { Button, Col, Container, Form, Row } from 'react-bootstrap'
 import { useNavigate, useParams } from 'react-router-dom'
-// import "../Section/Section.css"
 
 const EditeData = () => {
     const [name, setName] = useState('')
@@ -19,11 +18,11 @@ const EditeData = () => {
             setImg(data.data.img)
         })
     }
+
     useEffect(() => {
         GetOne(id)
     }, [])
     console.log(id);
-
 
     const editeData_func = () => {
         let obj = {

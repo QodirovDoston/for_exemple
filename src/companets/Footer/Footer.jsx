@@ -77,7 +77,6 @@ const Footer = () => {
                         <td>{datas.age}</td>
                         <img style={{ width: "100px", height: "80px" }} src={datas.img} alt="" />
                         <td>
-
                         <button onClick={() => DeleteData(datas.id)}>Delete</button>
                         <Link to={`/table/editetable/${datas.id}`}>
                           <button className='editbtn ' onClick={() => edite_func(datas.id)}>Edite</button>

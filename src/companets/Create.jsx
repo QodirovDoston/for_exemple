@@ -6,10 +6,13 @@ import { useNavigate } from 'react-router'
 const Create = () => {
   const [name, setName] = useState('')
   const [age, setAge] = useState('')
+  const [img, setImg] = useState('')
   const navigate =useNavigate()
   let obj = {
     name: name,
-    age: age
+    age: age,
+    img: img
+
   }
   
   const createData = (e) => {
@@ -20,6 +23,7 @@ const Create = () => {
         alert("seccess")
         setName("")
         setAge("")
+        setImg("")
         navigate('/table')
       }
     })
@@ -42,10 +46,14 @@ const Create = () => {
                 <Form.Control value={age} type="text" placeholder="Age" onChange={(e) => setAge(e.target.value)} />
                 {age.length < 1 ? <p style={{color:" red"}}>error</p> : <p style={{color:"green"}}>success</p>}
               </Form.Group>
+              <Form.Group className="mb-3" controlId="formBasicPassword">
+                <Form.Label className='name'>img</Form.Label>
+                <Form.Control value={img} type="text" placeholder="Age" onChange={(e) => setImg(e.target.value)} />
+                {age.length < 1 ? <p style={{color:" red"}}>error</p> : <p style={{color:"green"}}>success</p>}
+              </Form.Group>
                <Button style={{width:"100%"}} variant="primary" onClick={createData}>
               Submit
             </Button> 
-          
             </Form>
           </Col>
         </Row>
