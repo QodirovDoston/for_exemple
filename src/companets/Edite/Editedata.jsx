@@ -21,7 +21,7 @@ const EditeData = () => {
         })
     }
     useEffect(() => {
-        GetOne()
+        GetOne(id)
     }, [])
     const editeData_func = () => {
         let obj = {
