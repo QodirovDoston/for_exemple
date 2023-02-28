@@ -10,7 +10,6 @@ const EditeData = () => {
     const [img, setImg] = useState('')
     const navigate = useNavigate()
     const { id } = useParams()
-    console.log(id);
 
     const GetOne = (id) => {
         axios.get(`http://localhost:3004/data/${id}`).then((data) => {
@@ -23,7 +22,7 @@ const EditeData = () => {
     useEffect(() => {
         GetOne(id)
     }, [])
-    const editeData_func = () => {
+    const editeData_func = (id) => {
         let obj = {
             name: name,
             age: age,

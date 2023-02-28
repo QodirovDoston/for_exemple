@@ -74,7 +74,7 @@ const Footer = () => {
                 <th>Age</th>
               </tr>
               <tbody>
-                {data ?.map((datas) => {
+                {data?.map((datas)=>{
                   if(datas.id <= drop)
                   return (
                     <tr>
